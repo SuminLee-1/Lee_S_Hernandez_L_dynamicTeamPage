@@ -26,7 +26,7 @@
 
  body {
     font-family: 'Fino Sans', Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem;
     background-color: #fff;
  }
 
@@ -52,7 +52,7 @@ p {
       height: 3.75rem;
       position: sticky;
 
-      filter:drop-shadow(0px 3px 5px rgba(221, 219, 204, 0.867)) ;
+      filter:drop-shadow(0rem 0.1875rem 0.3125rem rgba(221, 219, 204, 0.867)) ;
    }
    
    #main-nav{
@@ -151,21 +151,25 @@ p {
  /* 3. ---team members--- */
  
  .container {
-   max-width: 1200px;
+   max-width: 75rem;
    margin-inline: auto;
-   padding: 100px 15px;
+   padding: 6.25rem 0.9375rem;
  }
 
 
 #meet-the-team {
-    height: 108px;
+    height: 6.25rem;
+    width: 31.25rem;
     border-radius: 1rem;
     font-size: 2rem;
     text-align: center;
+    justify-items: center;
     background-color: #F7B92E;
-    padding: 30px 30px 30px 30px;
-    margin-top: 80px;
-    margin-bottom: 50px;
+    padding: 1.875rem 1.875rem 1.875rem 1.875rem;
+    margin-top: 1.25rem;
+    margin-bottom: 3.125rem;
+    margin-left: auto;
+    margin-right: auto;
  }
 
 .gallery-wrapper {
@@ -178,10 +182,10 @@ p {
 
    display: flex;
    flex: 1;
-   height: 500px;
+   height: 31.25rem;
 
    background-color: #000;
-   padding: 25px;
+   padding: 1.5625rem;
    opacity: 1;
    overflow: hidden;
    transition: flex .5s, opacity 0.25s;
@@ -217,9 +221,9 @@ p {
     font-size: 1.5rem;
     text-align: center;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 100px;
-    padding: 0 50px 0 50px;
+    margin-top: 1.25rem;
+    margin-bottom: 6.25rem;
+    padding: 0 3.125rem 0 3.125rem;
  }
 
 
@@ -231,18 +235,18 @@ p {
  }
 
  .name {
-   font-size: 37px;
+   font-size: 2.3125rem;
    background: linear-gradient(90deg,#f32d5b,#ff009b);
-   padding-inline: 10px;
-   transform: translateY(-10px);
+   padding-inline: 0.625rem;
+   transform: translateY(-0.625rem);
  }
 
  .role {
    display: inline-block;
    background: linear-gradient(90deg,#4136d9,#0086c7);
-   padding: 10px;
-   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
-   transform: translateY(10px);
+   padding: 0.625rem;
+   box-shadow: 0 0.0625rem 0.625rem rgba(0, 0, 0, 0.2);
+   transform: translateY(0.625rem);
  }
 
  .name,
@@ -263,10 +267,19 @@ p {
    transition-delay: 0s;
  }
 
+ .gallery-wrapper{
+   flex-direction: column;
+   height: 100vh;
+ }
+ 
+ .gallery-item:hover {
+   flex-basis: 100%;
+ }
+
 
  #banner-divider{
-    height: 192px;
-    margin-top: 200px;
+    height: 12rem;
+    margin-top: 12.5rem;
  }
  
  
@@ -280,12 +293,81 @@ p {
     font-style: italic;
     font-size: 1.5rem;
     text-align: center;
-    height: 400px;
+    height: 25rem;
     padding: 2rem;
  }
 
+ /* ======================== */
 
+ .lightbox { 
+   width: 100vw; 
+   height: 100vh; 
+
+   position: absolute;
+   top: 0;
+   left: 0;
+
+   background-color: rgba(0, 0, 0, 0.85);
+   background-repeat: no-repeat;
+
+   background-size: 55vh; 
+   background-position: 2.5rem bottom;
+
+   z-index: 5000;
+
+   display: none;   
+   margin-top: 1.25rem;
+}
+
+
+.lightbox_close {
+   position: relative;
+   top: 1.25rem;
+   left: 85%;
+
+   color: white;
+   font-size: 3em;
+
+   text-decoration: none;
+
+   font-weight: bolder;
+   z-index: 5002;
+}
+
+.lightbox_close:hover { color: #F7B92E; }
+
+
+.lightbox article {
+   width: 55%;
+   margin-left: 40%;
+   padding-top: 3.125rem;
+
+   color: #fff;
+
+   margin-top: 1.25rem;
+}
+
+.lb_text, .lb_text2, .lb_heading { text-align: left; }
+
+.lb_text, .lb_text2 {
+   font-family: Helvetica, sans-serif;
+   font-style: italic;
+   font-weight: 300;
+   line-height: 1.6 !important;
+   margin-left: 0;
+   padding-top: 2em;
+   font-size: 1.25rem;
+}
+
+.lb_heading {
+   font-size: 2rem;
+}
+
+/* turn the lightbox on using the :target pseudo selector */
+.lightbox:target { display: block; }
  
+
+
  /* 10. ---Footer--- */
  
 
@@ -403,12 +485,9 @@ p {
       padding-bottom: 1.25rem;
    }
    
-   
  
  
- 
- 
- /* 11. ---Tablet Queries--- */
+ /* ---Tablet Queries--- */
 
 
 
@@ -427,6 +506,11 @@ p {
       #main-nav {
             height: 4.6875rem;
             position: sticky;
+      }
+
+      #main-logo {
+         width: 9.375rem;
+         height: 6.25rem;
       }
 
 
@@ -450,21 +534,31 @@ p {
       grid-row: 1/4;
       }
 
+      #meet-the-team {
+         margin-top: 1.875rem;
+      }
+
       .gallery-wrapper{
          flex-direction: column;
          height: 100vh;
-       }
-       
-       .gallery-item:hover {
+
+
+      }
+
+      .gallery-item:hover {
          flex-basis: 100%;
-       }
+      }
+
+      .lightbox_close {
+         left: 90%;
+      }
 }
 
 
 
- /* 12. ---Desktop Queries --- */
- 
- @media screen and (min-width: 75rem) { 
+ /* ---Desktop Queries --- */
+
+@media screen and (min-width: 75rem) { 
 
       html {
          font-size: 130%;
@@ -519,7 +613,7 @@ p {
    
       #main-nav ul {
          margin: 0;
-         margin-top: 10px;
+         margin-top: 0.625rem;
          display: inline-flex;
       }
    
@@ -527,7 +621,7 @@ p {
          display: inline;
          color: #110F3D;
    
-         font-size: 23px;
+         font-size: 1.2rem;
       }
    
    
@@ -553,8 +647,8 @@ p {
    
    
       #main-logo {
-         height: 8.125rem;
-         width: 10rem;
+         height: 7rem;
+         width: 9rem;
    
          z-index: 3;
    
@@ -565,15 +659,23 @@ p {
       .gallery-wrapper{
          flex-direction: row;
          height: 100vh;
-       }
-       
-       .gallery-item:hover {
+      }
+
+      .gallery-item:hover {
          flex-basis: 20%;
-       }
-          
-      
+      }
+
+      .lightbox {
+         background-image: url('../images/1-member.png');
+         background-size: 40vh; 
+         background-position: 30px center;
+      }
+
+      .lightbox_close {
+         left: 90%;
+      }
    
-    
+
       footer {
             height: 45rem;
       }
@@ -608,95 +710,96 @@ p {
       }
    
    #send_footer {
-         border-radius: 40px;
+         border-radius: 2.5rem;
          background-color: #fff;
          align-items: center;
          font-style: italic;
    
          cursor: pointer;
-         padding: 10px;
-         padding-left: 20px;
-         padding-right: 20px;
+         padding: 0.625rem;
+         padding-left: 1.25rem;
+         padding-right: 1.25rem;
    }
    
    
    #send_footer:hover {
-         box-shadow: inset 0px -50px 0px 0px #FFC738;
+         box-shadow: inset 0rem -3.125rem 0rem 0rem #FFC738;
          transition:all .8s ease;
    }
    
    #send_footer span {
          color: #110F40;
-         margin: 10px;
+         margin: 0.625rem;
    }
    
    #info-con {
          color: #fff;
          grid-column: 2/8;
-         margin-left: 10px;
+         margin-left: 0.625rem;
    }
    
    #info-con h3 {
          font-weight: 700;
          font-style: normal;
-         margin-bottom: 20px;
+         margin-bottom: 1.25rem;
    }
    
    #info-con span {
-         margin-bottom: 15px;
+         margin-bottom: 0.9375rem;
    }
    
    #sm-icons {
          display: flex;
-         height: 25px;
+         height: 1.5625rem;
    
          grid-column: 2/4;
-         margin-left: 10px;
-         margin-top: 0px;
+         margin-left: 0.625rem;
+         margin-top: 0rem;
    }
    
    #sm-icons img {
-         margin-right: 10px;
+         margin-right: 0.625rem;
    }
    
    #ver-line {
          grid-column: 2/12;
-         border-bottom: solid 1px #fff;
+         border-bottom: solid 0.0625rem #fff;
          
-         margin-top: 30px;
-         margin-bottom: 30px;
+         margin-top: 1.875rem;
+         margin-bottom: 1.875rem;
    }
    
    #ver-line span {
          color: #fff;
-         font-size: 15px;
+         font-size: 0.9375rem;
    
-         padding-bottom: 20px;
+         padding-bottom: 1.25rem;
    }
+
  
  
  }
  
  
- @media screen and (min-width: 1920px) { 
+ @media screen and (min-width: 120rem) { 
     header {
-          height: 110px;
+          height: 6.875rem;
     }
  
     #main-nav {
-          height: 110px;
+          height: 6.875rem;
     }
  
     #burger-con {display: none;}
  
     #main-logo {
-          height: 130px;
-          width: 160px;
+          height: 8.125rem;
+          width: 10rem;
     }
  
  
     #banner-divider{
-      height: 192px;
+      height: 12rem;
     }
 
 
@@ -709,41 +812,41 @@ p {
           width: 20rem;
           height: 100%;
     
-          margin-top: 70px;
+          margin-top: 4.375rem;
     }
     
     
     #info {
-          width: 212px;
-          height: 132px;
+          width: 13.25rem;
+          height: 8.25rem;
     }
     
     #icons{
-          height: 27px;
-          width: 105px;
+          height: 1.6875rem;
+          width: 6.5625rem;
     }
     
     #contact-form {
           /* display: block; */
-          margin-top: 200px;
+          margin-top: 12.5rem;
  
           grid-row: 1/3;
     }
     
     #cont-f-1, #cont-f-2 {
-          height: 30px;
-          width: 232px;
-          margin-bottom: 30px;
+          height: 1.875rem;
+          width: 14.5rem;
+          margin-bottom: 1.875rem;
     }
     
     #cont-f-4, #cont-f-3 {
-          height: 60px;
-          width: 484px;
+          height: 3.75rem;
+          width: 30.25rem;
     }
     
     #submit-button {
-          height: 30px;
-          width: 100px;
+          height: 1.875rem;
+          width: 6.25rem;
     }
 
     footer {
@@ -780,70 +883,70 @@ p {
 }
 
 #send_footer {
-   border-radius: 40px;
+   border-radius: 2.5rem;
    background-color: #fff;
    align-items: center;
    font-style: italic;
 
    cursor: pointer;
-   padding: 10px;
-   padding-left: 20px;
-   padding-right: 20px;
+   padding: 0.625rem;
+   padding-left: 1.25rem;
+   padding-right: 1.25rem;
 }
 
 
 #send_footer:hover {
-   box-shadow: inset 0px -50px 0px 0px #FFC738;
+   box-shadow: inset 0rem -3.125rem 0rem 0rem #FFC738;
    transition:all .8s ease;
 }
 
 #send_footer span {
    color: #110F40;
-   margin: 10px;
+   margin: 0.625rem;
 }
 
 #info-con {
    color: #fff;
    grid-column: 2/7;
-   margin-left: 10px;
+   margin-left: 0.625rem;
 }
 
 #info-con h3 {
    font-weight: 700;
    font-style: normal;
-   margin-bottom: 20px;
+   margin-bottom: 1.25rem;
 }
 
 #info-con span {
-   margin-bottom: 15px;
+   margin-bottom: 0.9375rem;
 }
 
 #sm-icons {
    display: flex;
-   height: 25px;
+   height: 1.5625rem;
 
    grid-column: 2/4;
-   margin-left: 10px;
-   margin-top: 20px;
+   margin-left: 0.625rem;
+   margin-top: 1.25rem;
 }
 
 #sm-icons img {
-   margin-right: 10px;
+   margin-right: 0.625rem;
 }
 
 #ver-line {
    grid-column: 2/12;
-   border-bottom: solid 1px #fff;
+   border-bottom: solid 0.0625rem #fff;
    
-   margin-top: 30px;
-   margin-bottom: 30px;
+   margin-top: 1.875rem;
+   margin-bottom: 1.875rem;
 }
 
 #ver-line span {
    color: #fff;
-   font-size: 15px;
+   font-size: 0.9375rem;
 
-   padding-bottom: 20px;
+   padding-bottom: 1.25rem;
 }
 
 .gallery-wrapper{

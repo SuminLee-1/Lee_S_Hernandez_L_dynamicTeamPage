@@ -52,17 +52,22 @@
          </div>
 
 
-         <div class="gallery-wrapper">
+         <div class="gallery-wrapper  members">
             <figure class="gallery-item">
-               <img src="images/portrait-female-1.jpg" alt="Lee" class="item-image">
+               <a href="#lightbox" data-member="sumin">
+                  <img src="images/1-port-mem.jpg" alt="Lee" class="item-image">
+               </a>
                <figcaption class="item-description">
                   <h2 class="name">Sumin Lee</h2>
                   <span class="role">Designer / Coder</span>
                </figcaption>
+            
             </figure>
             
             <figure class="gallery-item">
-               <img src="images/portrait-female-2.jpg" alt="Hernandez" class="item-image">
+               <a href="#lightbox" data-member="loui">
+                  <img src="images/portrait-female-2.jpg" alt="Hernandez" class="item-image">
+               </a>
                <figcaption class="item-description">
                   <h2 class="name">Loui Hernandez</h2>
                   <span class="role">Designer / Coder</span>
@@ -79,13 +84,29 @@
          </div>
       </section>
 
-      <section></section>
 
       <section class="grid-con" id="inspirational-quote">
          <div  class="box-6 col-span-full m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11 xl-col-start-3 xl-col-end-11" id="inspi-quote">
             <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.text ever since the 1500s <br><br>Billy Beer</h2>
          </div>
       </section>
+
+      <!-- lightbox goes here -->
+    <section class="lightbox" id="lightbox">
+      <!-- close button -->
+      <a href="" class="lightbox_close">x</a>
+
+      <article>
+          <h3 class="lb_heading">Sumin Lee - Designer / Directer</h3>
+
+          <p class="lb_text">
+            Sumin Lee is a directer and designer of Billy Beer (first-year student in Fanshawe College’s Interactive Media Design). Along with her strong understanding of design principles, user experience, and industry-standard technology, she created a responsive website that increased user engagement and achieved company goals.
+         </p>
+         <p class="lb_text2">
+            Effective brand messages are delivered on the website by creative, user-centric designers. Working on content management systems that are well-known and familiar in front-end development languages.
+         </p>
+      </article>
+  </section>
 
    </main>
 
@@ -129,5 +150,7 @@
 
    </footer> 
    <script src="js/main.js"></script>
+   <script src="js/lightBox.js"></script>
+   <script src="js/members.js"></script>
 </body>
 </html>
