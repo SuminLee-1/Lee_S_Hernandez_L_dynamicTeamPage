@@ -485,12 +485,9 @@ p {
       padding-bottom: 1.25rem;
    }
    
-   
  
  
- 
- 
- /* 11. ---Tablet Queries--- */
+ /* ---Tablet Queries--- */
 
 
 
@@ -559,7 +556,7 @@ p {
 
 
 
- /* 12. ---Desktop Queries --- */
+ /* ---Desktop Queries --- */
 
 @media screen and (min-width: 75rem) { 
 
