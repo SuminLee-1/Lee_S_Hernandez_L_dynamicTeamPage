@@ -154,6 +154,8 @@ p {
    max-width: 75rem;
    margin-inline: auto;
    padding: 6.25rem 0.9375rem;
+
+   padding-bottom: 0;
  }
 
 
@@ -286,16 +288,21 @@ p {
  
 
  #inspi-quote {
-    color: #78150D;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-style: italic;
-    font-size: 1.5rem;
-    text-align: center;
-    height: 25rem;
-    padding: 2rem;
- }
+   color: #78150D;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-style: italic;
+   font-size: 1.5rem;
+   text-align: center;
+   height: 25rem;
+   padding: 2rem;
+   padding-top: 0;
+}
+
+#inspi-quote span {
+  font-size: 40px;
+}
 
  /* ======================== */
 
