@@ -1,3 +1,4 @@
+
 (function(){
 	"use strict";	
 	console.log("fired");
@@ -9,6 +10,9 @@
 		burgerCon.classList.toggle("slide-toggle");
 		button.classList.toggle("expanded");
 	};
+
+
+
 
 	// let hamburgerMenu = () => {
 	// 	burgerCon.classList.toggle("slide-toggle");
